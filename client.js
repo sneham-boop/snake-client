@@ -12,11 +12,29 @@ const connect = function () {
     console.log(data);
   });
 
-  conn.on("connect",()=>{
-    console.log("Connection to game server has been established successfully..");
-  })
+  conn.on("connect", () => {
+    console.log(
+      "Connection to game server has been established successfully.."
+    );
+  });
 
   conn.write("Name: SKM");
+  conn.write("Move: up");
+  setTimeout(() => {
+    conn.write("Move: left");
+    setTimeout(() => {
+      conn.write("Move: left");
+      setTimeout(() => {
+        conn.write("Move: down");
+        setTimeout(() => {
+          conn.write("Move: down");
+          setTimeout(() => {
+            conn.write("Move: right");
+          }, 1000);
+        }, 500);
+      }, 500);
+    }, 500);
+  }, 500);
 
   return conn;
 };
