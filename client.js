@@ -12,6 +12,12 @@ const connect = function () {
     console.log(data);
   });
 
+  conn.on("connect",()=>{
+    console.log("Connection to game server has been established successfully..");
+  })
+
+  conn.write("Name: SKM");
+
   return conn;
 };
 
