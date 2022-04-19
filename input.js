@@ -4,8 +4,9 @@ const {
   MOVE_DOWN_KEY,
   MOVE_LEFT_KEY,
   MOVE_RIGHT_KEY,
-  BANTER
+  BANTER,
 } = require("./constants");
+
 // setup interface
 const setupInput = function (conn) {
   connection = conn;
@@ -17,17 +18,19 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-// accept input from player
+// Accept input from player
 const handleUserInput = function (key) {
+  // Terminate game session
   if (key === "\u0003") {
     process.exit();
   }
+  // Moves
   if (key === "w") connection.write(MOVE_UP_KEY);
   if (key === "a") connection.write(MOVE_LEFT_KEY);
   if (key === "s") connection.write(MOVE_DOWN_KEY);
   if (key === "d") connection.write(MOVE_RIGHT_KEY);
 
-  // Short messages
+  // Short chat messages
   if (key === "h") connection.write(BANTER[key]);
   if (key === "g") connection.write(BANTER[key]);
   if (key === "n") connection.write(BANTER[key]);
