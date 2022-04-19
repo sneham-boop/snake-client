@@ -18,24 +18,8 @@ const connect = function () {
     );
   });
 
+  // Set player name
   conn.write("Name: SKM");
-  conn.write("Move: up");
-  setTimeout(() => {
-    conn.write("Move: left");
-    setTimeout(() => {
-      conn.write("Move: left");
-      setTimeout(() => {
-        conn.write("Move: down");
-        setTimeout(() => {
-          conn.write("Move: down");
-          setTimeout(() => {
-            conn.write("Move: right");
-          }, 1000);
-        }, 500);
-      }, 500);
-    }, 500);
-  }, 500);
-
   return conn;
 };
 
