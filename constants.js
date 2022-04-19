@@ -20,5 +20,5 @@ module.exports = {
   MOVE_LEFT_KEY,
   MOVE_RIGHT_KEY,
   BANTER,
-  NAME
+  NAME,
 };

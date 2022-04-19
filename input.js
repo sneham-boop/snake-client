@@ -8,7 +8,7 @@ const {
 } = require("./constants");
 
 // setup interface
-const setupInput = function (conn) {
+const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -19,7 +19,7 @@ const setupInput = function (conn) {
 };
 
 // Accept input from player
-const handleUserInput = function (key) {
+const handleUserInput = (key) => {
   // Terminate game session
   if (key === "\u0003") {
     process.exit();
