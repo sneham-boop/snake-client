@@ -14,7 +14,6 @@ const connect = () => {
     console.log(
       "Connection to game server has been established successfully.."
     );
-    console.log(conn);
   });
 
   // Set player name

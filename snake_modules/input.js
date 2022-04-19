@@ -4,7 +4,7 @@ const {
   MOVE_DOWN_KEY,
   MOVE_LEFT_KEY,
   MOVE_RIGHT_KEY,
-  BANTER,
+  MESSAGES,
 } = require("./constants");
 
 // setup interface
@@ -31,10 +31,10 @@ const handleUserInput = (key) => {
   if (key === "d") connection.write(MOVE_RIGHT_KEY);
 
   // Short chat messages
-  if (key === "h") connection.write(BANTER[key]);
-  if (key === "g") connection.write(BANTER[key]);
-  if (key === "n") connection.write(BANTER[key]);
-  if (key === "y") connection.write(BANTER[key]);
+  if (key === "h") connection.write(MESSAGES[key]);
+  if (key === "g") connection.write(MESSAGES[key]);
+  if (key === "n") connection.write(MESSAGES[key]);
+  if (key === "y") connection.write(MESSAGES[key]);
 };
 
 module.exports = {

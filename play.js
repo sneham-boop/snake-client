@@ -1,5 +1,5 @@
-const { connect } = require("./client");
-const { setupInput } = require("./input");
+const { connect } = require("./snake_modules/client");
+const { setupInput } = require("./snake_modules/input");
 
 console.log("Connecting ...");
 

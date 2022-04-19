@@ -4,7 +4,7 @@ const MOVE_UP_KEY = "Move: up";
 const MOVE_LEFT_KEY = "Move: left";
 const MOVE_DOWN_KEY = "Move: down";
 const MOVE_RIGHT_KEY = "Move: right";
-const BANTER = {
+const MESSAGES = {
   h: "Say: How are you?",
   g: "Say: Is weather good?",
   n: "Say: Nope.",
@@ -19,6 +19,6 @@ module.exports = {
   MOVE_DOWN_KEY,
   MOVE_LEFT_KEY,
   MOVE_RIGHT_KEY,
-  BANTER,
+  MESSAGES,
   NAME,
 };
