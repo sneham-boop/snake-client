@@ -9,6 +9,7 @@ const MESSAGES = {
   g: "Say: Is weather good?",
   n: "Say: Nope.",
   y: "Say: Yep.",
+  nom: "Say: nom nom",
 };
 const NAME = "Name: SM";
 

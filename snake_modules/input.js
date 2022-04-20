@@ -13,8 +13,8 @@ const setupInput = (conn) => {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
-  stdin.resume();
   stdin.on("data", handleUserInput);
+  stdin.resume();
   return stdin;
 };
 
@@ -24,7 +24,8 @@ const handleUserInput = (key) => {
   if (key === "\u0003") {
     process.exit();
   }
-  // Moves
+
+  // Capture player moves with keys wasd
   if (key === "w") connection.write(MOVE_UP_KEY);
   if (key === "a") connection.write(MOVE_LEFT_KEY);
   if (key === "s") connection.write(MOVE_DOWN_KEY);
